@@ -1,0 +1,22 @@
+{
+  "name": "journal-app-ucn",
+  "version": "1.0.0",
+  "description": "A journal web app for students. Project for the Web API Development elective at University College Nordjylland (UCN).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aletrianti/journal-app-ucn.git"
+  },
+  "author": "Alessia Trianti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aletrianti/journal-app-ucn/issues"
+  },
+  "homepage": "https://github.com/aletrianti/journal-app-ucn#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
