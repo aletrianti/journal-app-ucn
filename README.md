@@ -5,6 +5,3 @@ A journal web app for students. Project for the Web API Development elective at 
 * [Alessia Trianti](https://github.com/aletrianti)
 * [Leonardo Miodrag](https://github.com/leonardomiodrag)
 * Sebastian Nedergaard Petersen
-
-## License
-* [MIT](https://choosealicense.com/licenses/mit/)
