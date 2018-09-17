@@ -7,7 +7,6 @@ const app = express();
 
 // Require modules
 const landing = require('./routes/landing');
-const register = require('./routes/register');
 const login = require('./routes/login');
 const choice = require('./routes/choice');
 const dashboard = require('./routes/dashboard');
@@ -20,7 +19,6 @@ app.use(express.json());
 // Routes
 // Do NOT add the path to the page before the variable - it gives an error
 app.use(landing);
-app.use(register);
 app.use(login);
 app.use(choice);
 app.use(dashboard);
