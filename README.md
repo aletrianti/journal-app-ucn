@@ -4,4 +4,4 @@ A journal web app for students. Project for the Web API Development elective at 
 ## Contributors
 * [Alessia Trianti](https://github.com/aletrianti)
 * [Leonardo Miodrag](https://github.com/leonardomiodrag)
-* Sebastian Nedergaard Petersen
+* [Sebastian Nedergaard Petersen](https://github.com/sepersen)
