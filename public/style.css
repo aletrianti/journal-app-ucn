@@ -18,8 +18,27 @@ body {
     font-weight: 400;
 }
 
+header {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
 h1, h2 {
     font-family: "futura-pt",sans-serif;
     font-weight: 600;
+}
+
+#landing {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../public/images/landingpic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: none;
+}
+
+#landinglogin {
+    text-align: center;
 }
 
