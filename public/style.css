@@ -1,1 +1,25 @@
 /* CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* WTF IS THE FONT NOT WORKING */
+
+@import url("https://use.typekit.net/bbu4tzr.css");
+
+body {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 400;
+}
+
+h1, h2 {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 600;
+}
+
