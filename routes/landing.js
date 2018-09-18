@@ -5,7 +5,7 @@ const router = express.Router();
 
 // GET - Render the landing page
 router.get('/', (req, res) => {
-    res.send("This will be the landing page");
+    res.render("index");
 });
 
 // Export module
