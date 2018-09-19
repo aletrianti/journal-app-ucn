@@ -120,3 +120,45 @@ input {
     border-bottom: #1F2A4E solid 4px;
     width: 5%;
 }
+
+
+/* DASHBOARD */ 
+
+#writedashboard h2 {
+    font-size: 45px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+#viewdashboard h2 {
+    font-size: 45px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+#viewdashboard div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#writedashboard div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+    width: 100%;
+}
