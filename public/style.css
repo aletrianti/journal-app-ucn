@@ -1,1 +1,113 @@
 /* CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 400;
+}
+
+header {
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
+footer {
+    text-align: center;
+    margin: 1%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+h1, h2 {
+    font-family: "futura-pt",sans-serif;
+    font-weight: 600;
+}
+
+#landing {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../public/images/landingpic.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: none;
+}
+
+#loginbody {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #C8C8D2 , #EFEFF7) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: none;
+}
+
+#landinglogin {
+    text-align: center;
+    position: absolute;
+    float: none;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#landinglogin h1, #landinglogin h2 {
+    font-size: 45px;
+}
+
+#loginform {
+    text-align: center;
+    position: absolute;
+    display: inline-block;
+    width: 500px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #1F2A4E;
+}
+
+/*ADD SHADOW */
+#loginbutton {
+    margin: 10% auto;
+    display: block;
+    width: 200px;
+    padding: 2.3%;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    background-color: #1F2A4E;
+    font-size: 25px;
+    color:white;
+    text-transform: uppercase;
+}
+
+/*ADD SHADOW */
+#loginsubmit {
+    margin: 10% auto;
+    display: block;
+    width: 500px;   
+    padding: 2.3%;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    background-color: #629B29;
+    font-size: 25px;
+    color:white;
+    text-transform: uppercase;
+}
+
+input {
+    margin: 2%;
+    padding: 2%;
+    border: #1F2A4E 4px solid;
+    border-radius: 10px;
+}
