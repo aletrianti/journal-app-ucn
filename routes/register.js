@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const path = require("path");
 
 // GET - Render the register page
 router.get('/register', (req, res) => {

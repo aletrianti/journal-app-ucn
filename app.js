@@ -14,9 +14,10 @@ const dashboard = require('./routes/dashboard');
 
 // If it is a JSON object, parse it
 app.use(express.json());
-app.engine('html', require('ejs').renderFile);
+// HTML
+app.use(express.static(__dirname + '/public/views'));
+// CSS and JS (static)
 app.use(express.static(__dirname + '/public'));
-app.set('view engine', 'html');
 
 // Routes
 // Do NOT add the path to the page before the variable - it gives an error
