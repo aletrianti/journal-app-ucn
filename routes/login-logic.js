@@ -40,7 +40,6 @@ router.post('/login', async (req, res) => {
         if (invalidPassStudent || invalidPassLecturer) throw 'Invalid username or password';
 
         // json web token (jwt)
-        
         const payload = {"UserID": user.UserID};
         if (user.UserRole === 'admin') payload.isAdmin = true;
         const token = jwt.sign(payload, config.get('jwtPrivateKey'));
@@ -48,7 +47,7 @@ router.post('/login', async (req, res) => {
         
 
     } catch (err) {
-        res.sendFile(path.join(__dirname + '/login.html'));
+        res.sendFile(path.join(__dirname + '/views' + '/login.html'));
     }
     sql.close();
 });
