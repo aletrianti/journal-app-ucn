@@ -19,10 +19,9 @@ app.use(express.static(__dirname + '/public/views'));
 app.use(express.static(__dirname + '/public'));
 
 // Routes
-// Do NOT add the path to the page before the variable - it gives an error
-app.use(landing);
-app.use(login);
-app.use(dashboard);
+app.use('/', landing);
+app.use('/login', login);
+app.use('/dashboard', dashboard);
 
 
 // Server - Listening on port 3000

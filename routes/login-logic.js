@@ -6,7 +6,7 @@ const router = express.Router();
 const con = require('../config/connection');
 const sql = require('mssql');
 
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
     // schema
     const schema = {
         StudentMail: Joi.string().min(5).max(255).email().required(),
@@ -40,15 +40,15 @@ router.post('/', async (req, res) => {
         if (invalidPassStudent || invalidPassLecturer) throw 'Invalid username or password';
 
         // json web token (jwt)
-        /* 
+        
         const payload = {"UserID": user.UserID};
         if (user.UserRole === 'admin') payload.isAdmin = true;
         const token = jwt.sign(payload, config.get('jwtPrivateKey'));
         res.send(token);
-        */
+        
 
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.sendFile(path.join(__dirname + '/login.html'));
     }
     sql.close();
 });

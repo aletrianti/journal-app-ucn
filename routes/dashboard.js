@@ -6,7 +6,7 @@ const path = require("path");
 const Joi = require('joi');
 
 // GET - Render the dashboard page
-router.get('/dashboard', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/dashboard.html'));
 });
 

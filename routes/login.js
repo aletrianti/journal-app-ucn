@@ -10,7 +10,7 @@ const sql = require('mssql');
 const auth = require('../middleware/auth');
 
 // GET
-router.get('/login', auth, async (req, res) => {
+router.get('/', /*auth,*/ async (req, res) => {
     // Render the login page
     res.sendFile(path.join(__dirname + '/login.html'));
 
@@ -26,7 +26,7 @@ router.get('/login', auth, async (req, res) => {
 });
 
 // POST
-router.post('/login', auth, async (req, res) => {
+router.post('/', /*auth,*/ async (req, res) => {
     try {
         res.sendFile(path.join(__dirname + '/dashboard.html')); 
     } catch(err) {
