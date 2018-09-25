@@ -8,7 +8,6 @@ const app = express();
 // Require modules
 const landing = require('./routes/landing');
 const login = require('./routes/login');
-const choice = require('./routes/choice');
 const dashboard = require('./routes/dashboard');
 
 
@@ -23,7 +22,6 @@ app.use(express.static(__dirname + '/public'));
 // Do NOT add the path to the page before the variable - it gives an error
 app.use(landing);
 app.use(login);
-app.use(choice);
 app.use(dashboard);
 
 

@@ -1,4 +1,4 @@
-const config = require('config');
+const config = require ('config');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const express = require("express");
@@ -9,8 +9,10 @@ const sql = require('mssql');
 router.post('/', async (req, res) => {
     // schema
     const schema = {
-        UserEmail: Joi.string().min(5).max(255).email().required(),
-        UserPassword: Joi.string().min(5).max(255).required()
+        StudentMail: Joi.string().min(5).max(255).email().required(),
+        LecturerMail: Joi.string().min(5).max(255).email().required(),
+        StudentPassword: Joi.string().min(5).max(255).required(),
+        LecturerPassword: Joi.string().min(5).max(255).required()
     };
 
     // error validation
@@ -23,22 +25,27 @@ router.post('/', async (req, res) => {
 
         // check email
         const result = await pool.request()
-                     .input('UserEmail', sql.NVarChar, req.body.UserEmail)
-                     .query('SELECT * FROM AUTH_USER WHERE UserEmail = @UserEmail');
+                     .input('StudentMail', sql.NVarChar, req.body.StudentMail)
+                     .input('LecturerMail', sql.NVarChar, req.body.LecturerMail)
+                     .query('SELECT * FROM AUTH_USER WHERE StudentMail = @StudentMail')
+                     .query('SELECT * FROM AUTH_USER WHERE LecturerMail = @LecturerMail');
 
         const user = result.recordset[0];
 
         if (!user) throw 'Invalid username or password';
 
         // check password
-        const invalidPass = user.UserPassword.localeCompare(req.body.UserPassword);
-        if (invalidPass) throw 'Invalid username or password';
+        const invalidPassStudent = user.StudentPassword.localeCompare(req.body.StudentPassword);
+        const invalidPassLecturer = user.LecturerPassword.localeCompare(req.body.LecturerPassword);
+        if (invalidPassStudent || invalidPassLecturer) throw 'Invalid username or password';
 
         // json web token (jwt)
-        const playload = {"UserID": user.UserID};
-        if (user.UserRole === 'admin') playload.isAdmin = true;
-        const token = jwt.sign(playload, config.get('jwtPrivateKey'));
+        /* 
+        const payload = {"UserID": user.UserID};
+        if (user.UserRole === 'admin') payload.isAdmin = true;
+        const token = jwt.sign(payload, config.get('jwtPrivateKey'));
         res.send(token);
+        */
 
     } catch (err) {
         res.status(400).send(`$(err)`);
