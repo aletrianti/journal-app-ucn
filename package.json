@@ -22,6 +22,7 @@
   "homepage": "https://github.com/aletrianti/journal-app-ucn#readme",
   "dependencies": {
     "config": "^2.0.1",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "joi": "^13.6.0",
     "jsonwebtoken": "^8.3.0",

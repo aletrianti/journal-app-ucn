@@ -4,16 +4,12 @@ const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 const con = require('../config/connection');
 const sql = require('mssql');
 const auth = require('../middleware/auth');
 
 // GET
 router.get('/', /*auth,*/ async (req, res) => {
-    // Render the login page
-    
-
     try {
         const pool = await sql.connect(con);
         const result = await pool.request().query('SELECT * FROM Student; SELECT * FROM Lecturer');
@@ -27,11 +23,7 @@ router.get('/', /*auth,*/ async (req, res) => {
 
 // POST
 router.post('/', /*auth,*/ async (req, res) => {
-    try {
-        
-    } catch(err) {
-        
-    }
+    
 });
 
 // Export module

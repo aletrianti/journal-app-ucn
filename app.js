@@ -3,6 +3,7 @@
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
 
 // Require modules
@@ -17,6 +18,8 @@ const write = require('./routes/write');
 app.use(express.json());
 // CSS and JS (static)
 app.use(express.static(__dirname + '/public'));
+// CORS
+app.use(cors());
 
 // Routes
 app.use('/', landing);
