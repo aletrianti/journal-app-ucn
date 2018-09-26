@@ -6,7 +6,7 @@ const path = require("path");
 
 // GET - Render the landing page
 router.get('/', (req, res) => {
-    res.sendFile('/index.html');
+    
 });
 
 // Export module

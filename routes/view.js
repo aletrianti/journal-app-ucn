@@ -12,7 +12,7 @@ const auth = require('../middleware/auth');
 // GET
 router.get('/', /*auth,*/ async (req, res) => {
     // Render the login page
-    res.sendFile('/view.html');
+    
 
     try {
         const pool = await sql.connect(con);
