@@ -166,3 +166,87 @@ input {
     height: 100%;
     width: 100%;
 }
+
+#wrapper h2 {
+    border: #1F2A4E 5px solid;
+    border-radius: 10px;
+    padding: 1% 2%;
+    color: #1F2A4E;
+}
+
+/* WRITE */ 
+
+
+#write {
+    color: #1F2A4E;
+}
+
+#write h2 {
+    font-size: 45px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+
+#write div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#write div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#wrapperwrite {
+    height: 100%;
+    width: 100%;
+}
+
+/* WRITE */ 
+
+
+#view {
+    color: #1F2A4E;
+}
+
+#view h2 {
+    font-size: 45px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+
+#view div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#view div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
+}
+
+#wrapperview {
+    height: 100%;
+    width: 100%;
+}
+
