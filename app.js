@@ -9,6 +9,8 @@ const app = express();
 const landing = require('./routes/landing');
 const login = require('./routes/login');
 const dashboard = require('./routes/dashboard');
+const view = require('./routes/view');
+const write = require('./routes/write');
 
 
 // If it is a JSON object, parse it
@@ -22,6 +24,8 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', landing);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
+app.use('/view', view);
+app.use('/write', write);
 
 
 // Server - Listening on port 3000
