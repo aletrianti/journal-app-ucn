@@ -12,7 +12,7 @@ const auth = require('../middleware/auth');
 // GET
 router.get('/', /*auth,*/ async (req, res) => {
     // Render the login page
-    res.sendFile(path.join(__dirname + '/write.html'));
+    res.sendFile('/write.html');
 });
 
 // POST

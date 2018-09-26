@@ -7,7 +7,7 @@ const Joi = require('joi');
 
 // GET - Render the dashboard page
 router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname + '/dashboard.html'));
+    res.sendFile('/dashboard.html');
 });
 
 // Export module

@@ -12,7 +12,7 @@ const auth = require('../middleware/auth');
 // GET
 router.get('/', /*auth,*/ async (req, res) => {
     // Render the login page
-    res.sendFile(path.join(__dirname + '/view.html'));
+    res.sendFile('/view.html');
 
     try {
         const pool = await sql.connect(con);
@@ -23,11 +23,6 @@ router.get('/', /*auth,*/ async (req, res) => {
         res.status(400).send(`$(err)`);
     }
     sql.close();
-});
-
-// POST
-router.post('/', (req, res) => {
-
 });
 
 // Export module
