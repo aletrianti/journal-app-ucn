@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 const con = require('../config/connection');
 const sql = require('mssql');
 const auth = require('../middleware/auth');
