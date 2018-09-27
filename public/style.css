@@ -97,7 +97,7 @@ h1, h2 {
 }
 
 /*ADD SHADOW */
-#loginsubmit {
+#loginsubmit, #writebutton {
     margin: 10% auto;
     display: block;
     width: 500px;   
@@ -307,4 +307,3 @@ input {
     height: 100%;
     width: 100%;
 }
-
