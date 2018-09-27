@@ -43,9 +43,9 @@ router.post('/', auth, async (req, res) => {
         // check email
         const result = await pool.request()
                      .input('StudentMail', sql.NVarChar, req.body.StudentMail)
-                    // .input('LecturerMail', sql.NVarChar, req.body.LecturerMail)
+                     .input('LecturerMail', sql.NVarChar, req.body.LecturerMail)
                      .query('SELECT * FROM AUTH_USER WHERE StudentMail = @StudentMail')
-                    // .query('SELECT * FROM AUTH_USER WHERE LecturerMail = @LecturerMail');
+                     .query('SELECT * FROM AUTH_USER WHERE LecturerMail = @LecturerMail');
 
         const user = result.recordset[0];
 
