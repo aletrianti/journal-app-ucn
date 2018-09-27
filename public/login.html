@@ -7,29 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/bbu4tzr.css">
-    <script src="./public.js"></script>
 </head>
 <body id="loginbody">
     <header>
-        <a href="/index.html"><img src="../images/logo.png"></a>
+        <a href="index.html"><img src="../images/logo.png"></a>
     </header>
     
     <div>
         <p id="logintitle">Login</p>
     </div>
 
-    <form id="loginform" action="/login" method="POST">
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname">
+    <form id="loginform">
+        <label><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id="username-login">
     
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw">
+        <label><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="password-login">
             
-        <button id="loginsubmit" type="submit">Login</button>
+        <div id="loginsubmit">Login</div>
     </form>
 
     <footer>
         <p>Copyright 2018. Developled by Alessia Trianti, Sebastian Nedergaard Petersen and Leonardo Miodrag</p>
     </footer>
+    <script src="../request.js"></script>
 </body>
 </html>
