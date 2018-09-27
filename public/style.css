@@ -176,7 +176,7 @@ input {
 
 /* WRITE */ 
 
-
+/*
 #write {
     color: #1F2A4E;
 }
@@ -210,9 +210,67 @@ input {
 #wrapperwrite {
     height: 100%;
     width: 100%;
+}*/
+
+/*seb's code ▼*/
+
+#left {
+    width: 50%;
+    height: 100vh;
+    float: left;
+    background-color: rgb(195, 195, 206);
 }
 
-/* WRITE */ 
+#right {
+    width: 50%;
+    height: 100vh;
+    float: right;
+    background-color: #C8C8D2;
+}
+
+#writebox h2 {
+    font-size: 45px;
+    position: absolute;
+    padding: 1%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+    border: solid 2px #1F2A4E;
+    border-radius: 10%;
+}
+
+
+#writefooter {
+    display: block;
+    text-align: center;
+    margin: 1%;
+    position: relative;
+    top: 5%;
+   
+}
+
+#writebutton {
+    margin: 0 0 10% 67%;
+}
+
+#writeform {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 1%;
+    background-color: #f8f8f8;
+    resize: none;
+}
+#footer-container {
+    margin: 0;
+    padding: 0;
+}
+
+/* VIEW */ 
 
 
 #view {
