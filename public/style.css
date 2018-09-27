@@ -176,7 +176,7 @@ input {
 
 /* WRITE */ 
 
-/*
+
 #write {
     color: #1F2A4E;
 }
@@ -212,8 +212,40 @@ input {
     width: 100%;
 }*/
 
-/*seb's code ▼*/
+#textarea {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    float: left;
+    transform: translate(-50%,-50%);
+    display: block;
+}
 
+#textarea textarea {
+    width: 20%;
+    height: 400px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 1%;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+#save {
+    margin: 10% auto;
+    display: block;
+    width: 500px;   
+    padding: 2.3%;
+    border: 0px solid transparent;
+    border-radius: 10px;
+    background-color: #629B29;
+    font-size: 25px;
+    color:white;
+    text-transform: uppercase;
+}
+
+
+/*
 #left {
     width: 50%;
     height: 100vh;
@@ -269,6 +301,8 @@ input {
     margin: 0;
     padding: 0;
 }
+/*seb's code ▼*/
+
 
 /* VIEW */ 
 
@@ -286,14 +320,6 @@ input {
     font-weight: 400;
 }
 
-
-#view div {
-    background-color: #1F2A4E;
-    width: 50%;
-    position: absolute;
-    right: 0px;
-    height: 100%;
-}
 
 #view div {
     background-color: #1F2A4E;
