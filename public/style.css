@@ -146,7 +146,7 @@ input {
     font-weight: 400;
 }
 
-#viewdashboard div {
+#viewdashboard a {
     background-color: #1F2A4E;
     width: 50%;
     position: absolute;
@@ -154,7 +154,7 @@ input {
     height: 100%;
 }
 
-#writedashboard div {
+#writedashboard a {
     background-color: #1F2A4E;
     width: 50%;
     position: absolute;
@@ -177,11 +177,19 @@ input {
 /* WRITE */ 
 
 
-#write {
+#left {
     color: #1F2A4E;
+    float: left;
+    width: 50%;
+    
 }
 
-#write h2 {
+#right {
+    float: right;
+    width: 50%;
+}
+
+#left h2 {
     font-size: 45px;
     position: absolute;
     top: 40%;
@@ -190,51 +198,42 @@ input {
     font-weight: 400;
 }
 
-
-#write div {
-    background-color: #1F2A4E;
+#right textarea {
     width: 50%;
-    position: absolute;
-    right: 0px;
-    height: 100%;
-}
-
-#write div {
-    background-color: #1F2A4E;
-    width: 50%;
-    position: absolute;
-    right: 0px;
-    height: 100%;
-}
-
-#wrapperwrite {
-    height: 100%;
-    width: 100%;
-}*/
-
-#textarea {
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    float: left;
-    transform: translate(-50%,-50%);
-    display: block;
-}
-
-#textarea textarea {
-    width: 20%;
-    height: 400px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 1%;
     background-color: #f8f8f8;
     resize: none;
+    font-family: "futura-pt",sans-serif;
+    font-weight: 400;
+    padding: 1%;
+
+}
+
+#right #title {
+    height: 50px;
+    margin-top: 5%;
+    overflow: hidden;
+}
+
+#right #body {
+    height: 400px;
+    overflow-y: auto;
+}
+
+#write div {
+    background-color: #1F2A4E;
+    width: 50%;
+    position: absolute;
+    right: 0px;
+    height: 100%;
 }
 
 #save {
-    margin: 10% auto;
+    margin: 2% 0;
     display: block;
-    width: 500px;   
+    width: auto;   
     padding: 2.3%;
     border: 0px solid transparent;
     border-radius: 10px;
@@ -244,68 +243,7 @@ input {
     text-transform: uppercase;
 }
 
-
-/*
-#left {
-    width: 50%;
-    height: 100vh;
-    float: left;
-    background-color: rgb(195, 195, 206);
-}
-
-#right {
-    width: 50%;
-    height: 100vh;
-    float: right;
-    background-color: #C8C8D2;
-}
-
-#writebox h2 {
-    font-size: 45px;
-    position: absolute;
-    padding: 1%;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-    font-weight: 400;
-    border: solid 2px #1F2A4E;
-    border-radius: 10%;
-}
-
-
-#writefooter {
-    display: block;
-    text-align: center;
-    margin: 1%;
-    position: relative;
-    top: 5%;
-   
-}
-
-#writebutton {
-    margin: 0 0 10% 67%;
-}
-
-#writeform {
-    width: 80%;
-    height: 80%;
-    margin: 10%;
-    margin-bottom: 5%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 1%;
-    background-color: #f8f8f8;
-    resize: none;
-}
-#footer-container {
-    margin: 0;
-    padding: 0;
-}
-/*seb's code ▼*/
-
-
-/* VIEW */ 
-
+/* VIEW */
 
 #view {
     color: #1F2A4E;
