@@ -7,7 +7,6 @@ const cors = require('cors');
 
 
 // Require modules
-const landing = require('./routes/landing');
 const login = require('./routes/login');
 const dashboard = require('./routes/dashboard');
 const view = require('./routes/view');
@@ -20,7 +19,6 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use('/', landing);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
 app.use('/view', view);

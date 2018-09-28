@@ -1,21 +1,17 @@
 // View route
 
-const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const express = require("express");
 const router = express.Router();
 const con = require('../config/connection');
 const sql = require('mssql');
-const auth = require('../middleware/auth');
 
 // GET
-router.get('/', /*auth,*/ async (req, res) => {
-    // Render the login page
-    
-
+// should display the name of the reflection/note in a list in view.html ----- ???
+router.get('/', async (req, res) => {
     try {
         const pool = await sql.connect(con);
-        const result = await pool.request().query('SELECT * FROM Reflection; SELECT * FROM Note');
+        const result = await pool.request().query('SELECT ReflectionName FROM Reflection; SELECT NoteName FROM Note');
 
         res.send(JSON.stringify(result.recordset));
     } catch (err) {

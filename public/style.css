@@ -216,7 +216,7 @@ input {
 }
 
 #right #body {
-    height: 400px;
+    height: 300px;
     overflow-y: auto;
 }
 

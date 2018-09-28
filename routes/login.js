@@ -25,15 +25,17 @@ router.get('/', auth, async (req, res) => {
 // POST
 router.post('/', auth, async (req, res) => {
     // schema
-    const schema = {
+    const loginSchema = {
+        // student
         StudentMail: Joi.string().min(5).max(255).email().required(),
-        LecturerMail: Joi.string().min(5).max(255).email().required(),
         StudentPassword: Joi.string().min(5).max(255).required(),
+        // lecturer
+        LecturerMail: Joi.string().min(5).max(255).email().required(),
         LecturerPassword: Joi.string().min(5).max(255).required()
     };
 
     // error validation
-    const {error} = Joi.validate(req.body, schema);
+    const {error} = Joi.validate(req.body, loginSchema);
     if (error) return res.status(400).send(error.details[0].message);
 
     // check db
@@ -57,7 +59,7 @@ router.post('/', auth, async (req, res) => {
         if (invalidPassStudent || invalidPassLecturer) throw 'Invalid username or password';
 
         // json web token (jwt)
-        const token = jwt.sign({"StudentID": user.StudentID}, config.get('jwtPrivateKey'));
+        const token = jwt.sign({"StudentID": user.StudentID, "LecturerID": user.LecturerID}, config.get('jwtPrivateKey'));
         res.send(token);
 
     } catch (err) {
