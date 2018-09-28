@@ -176,12 +176,9 @@ input {
 
 /* WRITE */ 
 
-
 #left {
-    color: #1F2A4E;
     float: left;
     width: 50%;
-    
 }
 
 #right {
@@ -190,6 +187,7 @@ input {
 }
 
 #left h2 {
+    color: #1F2A4E;
     font-size: 45px;
     position: absolute;
     top: 40%;
@@ -207,8 +205,8 @@ input {
     resize: none;
     font-family: "futura-pt",sans-serif;
     font-weight: 400;
+    font-size: 20px;
     padding: 1%;
-
 }
 
 #right #title {
@@ -245,29 +243,44 @@ input {
 
 /* VIEW */
 
-#view {
+#leftview{
+    float: left;
+    width: 50%
+}
+
+#leftview h2{
+    color: #1F2A4E;
+    font-size: 45px;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+}
+
+#wrapperview {
+    height: 100%;
+    width: 100%;
+}
+
+#content {
+    background: #1F2A4E;
+    width: 30%;
+    height: 500px;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+
+#right {
     color: #1F2A4E;
 }
 
-#view h2 {
+#right h2 {
     font-size: 45px;
     position: absolute;
     top: 40%;
     left: 60%;
     transform: translate(-50%,-50%);
     font-weight: 400;
-}
-
-
-#view div {
-    background-color: #1F2A4E;
-    width: 50%;
-    position: absolute;
-    right: 0px;
-    height: 100%;
-}
-
-#wrapperview {
-    height: 100%;
-    width: 100%;
 }
