@@ -1,4 +1,4 @@
-// LOGIN 
+// LOGIN - XMLHttpRequest
 
 function loginRequest() {
     var loginStudent = {

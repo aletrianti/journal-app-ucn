@@ -264,12 +264,21 @@ input {
 }
 
 #content {
-    background: #1F2A4E;
+    background: rgba(31, 42, 78, 0.7);
+    color: white;
     width: 30%;
-    height: 500px;
+    height: auto;
     position: absolute;
     top: 30%;
     left: 20%;
+}
+
+#content li {
+    padding: 10px;
+}
+
+#content li:nth-child(2n) {
+    background: rgba(31, 42, 78, 1);
 }
 
 #right {

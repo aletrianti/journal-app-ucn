@@ -7,7 +7,7 @@ const con = require('../config/connection');
 const sql = require('mssql');
 
 // GET
-// should display the name of the reflection/note in a list in view.html ----- ???
+// should display the name of the reflection/note in a list in view.html 
 router.get('/', async (req, res) => {
     try {
         const pool = await sql.connect(con);
@@ -21,8 +21,9 @@ router.get('/', async (req, res) => {
 });
 
 // GET
+// display note/reflection selected in view.html 
+// view selected note/reflection in the form in write.html
 router.get('/:id', async (req, res) => {
-    // display note/reflection selected in view.html ------ ???
     try {
         const pool = await sql.connect(con);
         const result = await pool.request().query('SELECT ReflectionName, ReflectionBody FROM Reflection;');

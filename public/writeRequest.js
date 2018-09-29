@@ -1,4 +1,4 @@
-// WRITE
+// WRITE - XMLHttpRequest
 
 function writeRequest() {
     var writeReflection = {
