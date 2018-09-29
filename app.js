@@ -15,6 +15,8 @@ const write = require('./routes/write');
 
 // If it is a JSON object, parse it
 app.use(express.json());
+// Track static files - public folder
+app.use(express.static(__dirname + '/public'));
 // CORS
 app.use(cors());
 
