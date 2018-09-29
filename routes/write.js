@@ -7,6 +7,10 @@ const router = express.Router();
 const con = require('../config/connection');
 const sql = require('mssql');
 
+// GET
+router.get('/', (req, res) => {
+    res.send('GET request to write route');
+});
 
 // POST
 router.post('/', async (req, res) => {

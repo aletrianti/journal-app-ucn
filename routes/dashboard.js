@@ -4,9 +4,8 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 
-// POST
-router.post('/', (req, res) => {
-    
+router.get('/', (req, res) => {
+    res.send('GET request to dashboard route');
 });
 
 // Export module

@@ -7,6 +7,7 @@ const cors = require('cors');
 
 
 // Require modules
+const index = require('./routes/index');
 const login = require('./routes/login');
 const dashboard = require('./routes/dashboard');
 const view = require('./routes/view');
@@ -21,6 +22,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
 // Routes
+app.use('/index', index);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
 app.use('/view', view);
