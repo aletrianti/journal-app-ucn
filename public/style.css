@@ -275,9 +275,19 @@ input {
 
 #content li {
     padding: 10px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 
 #content li:nth-child(2n) {
+    background: rgba(31, 42, 78, 0.75);
+}
+
+#content li:hover {
     background: rgba(31, 42, 78, 1);
 }
 

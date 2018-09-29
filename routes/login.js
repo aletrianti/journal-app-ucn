@@ -63,7 +63,7 @@ router.post('/', auth, async (req, res) => {
         res.send(token);
 
     } catch (err) {
-        
+        res.status(400).send(`$(err)`);
     }
     sql.close();
 });
