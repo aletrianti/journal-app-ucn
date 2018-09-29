@@ -21,15 +21,17 @@ router.get('/', async (req, res) => {
 });
 
 // GET
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
     // display note/reflection selected in view.html
-    // "TypeError: Cannot read property 'find' of undefined" --- ???
-    const result = con.Reflection.find(a => a.ReflectionID === parseInt(req.params.id));
-    if (!result) { 
-        res.status(404).send('The selected reflection was not found.');
-        return;
+    try {
+        const pool = await sql.connect(con);
+        const result = await pool.request().query('SELECT ReflectionName, ReflectionBody FROM Reflection;');
+
+        res.send(JSON.stringify(result.recordset));
+    } catch (err) {
+        res.status(400).send(`$(err)`);
     }
-    res.send(JSON.stringify(result));
+    sql.close();
 
     // view selected note/reflection in the form in write.html
     // code goes here

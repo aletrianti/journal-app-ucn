@@ -1,4 +1,4 @@
-// VIEW - XMLHttpRequest
+// View in write.html - XMLHttpRequest
 
 window.addEventListener('load', () => {
     let xmlRequest = new XMLHttpRequest();
@@ -8,10 +8,10 @@ window.addEventListener('load', () => {
         console.log(xmlRequest.response);
         // Parse response
         var refResult = JSON.parse(xmlRequest.response);
-        // Loop through the parsed response
-        for (ref in refResult) {
-            document.getElementById('content').innerHTML += '<li class="refName">' + refResult[ref].ReflectionName + '</li>';
-        }
+        document.getElementsByClassName('refName').addEventListener('click', () => {
+            // Redirect to the page of the reflection which was clicked
+            // Display title (ReflectionName) and body (ReflectionBody) in the form in write.html
+        });
     });
     xmlRequest.send();
 });

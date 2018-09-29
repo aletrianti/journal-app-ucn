@@ -273,7 +273,7 @@ input {
     left: 20%;
 }
 
-#content li {
+.refName {
     padding: 10px;
     cursor: pointer;
     transition: all .5s ease-in-out;
