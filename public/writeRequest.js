@@ -5,11 +5,13 @@ function writeRequest() {
         "ReflectionName": document.getElementById('title').value,
         "ReflectionBody": document.getElementById('body').value
     }
+    /*
     var writeNote = {
         "NoteName": document.getElementById('title').value,
         "NoteBody": document.getElementById('body').value
     }
-    return JSON.stringify(writeReflection, writeNote);
+    */
+    return JSON.stringify(writeReflection, /*writeNote*/);
 }
 
 document.getElementById('save').addEventListener('click', () => {
