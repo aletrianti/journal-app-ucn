@@ -7,19 +7,6 @@ const router = express.Router();
 const con = require('../config/connection');
 const sql = require('mssql');
 
-// GET
-router.get('/:id', async (req, res) => {
-    // display note/reflection selected in view.html ------ ???
-    try {
-        const pool = await sql.connect(con);
-        const result = await pool.request().query('SELECT ReflectionName, ReflectionBody FROM Reflection; SELECT NoteName, NoteBody FROM Note');
-
-        res.send(JSON.stringify(result.recordset));
-    } catch (err) {
-        res.status(400).send(`$(err)`);
-    }
-    sql.close();
-});
 
 // POST
 router.post('/', (req, res) => {
