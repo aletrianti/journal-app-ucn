@@ -30,14 +30,14 @@ router.post('/', async (req, res) => {
 
     // create new reflection in db
     try {
-        const pool = /*await*/ sql.connect(con);
-        const reflection = /*await*/ pool.request()
+        const pool = await sql.connect(con);
+        const reflection = await pool.request()
                         .input('ReflectionName', sql.NVarChar, req.body.ReflectionName)
                         .query('SELECT * FROM Reflection WHERE ReflectionName = @ReflectionName');
 
         if (reflection.recordset[0]) throw 'This reflection already exists';
 
-        const result = /*await*/ pool.request()
+        const result = await pool.request()
                         .input('ReflectionName', sql.NVarChar, req.body.ReflectionName)
                         .input('ReflectionBody', sql.NVarChar, req.body.ReflectionBody)
                         .query('INSERT INTO Reflection (ReflectionName, ReflectionBody) VALUES (@ReflectionName, @ReflectionBody)')
