@@ -291,7 +291,6 @@ input {
 
 .refName {
     padding: 10px;
-    cursor: pointer;
     transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
@@ -301,10 +300,6 @@ input {
 
 .refName:nth-child(2n) {
     background: rgba(31, 42, 78, 0.7);
-}
-
-.refName:hover {
-    background: rgba(31, 42, 78, 1);
 }
 
 #right {
