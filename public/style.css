@@ -108,6 +108,7 @@ h1, h2 {
     font-size: 25px;
     color:white;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 input {
@@ -264,13 +265,22 @@ input {
 }
 
 #content {
-    background: rgba(31, 42, 78, 0.7);
+    background: rgba(31, 42, 78, 0.75);
     color: white;
     width: 30%;
     height: auto;
     position: absolute;
     top: 30%;
     left: 20%;
+}
+
+#content-item {
+    padding: 10px;
+    background-color: white;
+    border: 2px solid rgba(31, 42, 78, 1);
+    color: rgba(31, 42, 78, 1);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .refName {
@@ -283,11 +293,11 @@ input {
     -o-transition: all .5s ease-in-out;
 }
 
-#content li:nth-child(2n) {
-    background: rgba(31, 42, 78, 0.75);
+.refName:nth-child(2n) {
+    background: rgba(31, 42, 78, 0.7);
 }
 
-#content li:hover {
+.refName:hover {
     background: rgba(31, 42, 78, 1);
 }
 
