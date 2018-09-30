@@ -76,7 +76,7 @@ h1, h2 {
     display: flex;
     flex-direction: column;
     width: 500px;
-    top: 40%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     color: #1F2A4E;

@@ -1,6 +1,6 @@
 // Login route
 
-const config = require ('config');
+const config = require('config');
 const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 const express = require("express");

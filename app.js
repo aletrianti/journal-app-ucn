@@ -22,7 +22,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
 // Routes
-app.use('/index', index);
+app.use('/', index);
 app.use('/login', login);
 app.use('/dashboard', dashboard);
 app.use('/view', view);
