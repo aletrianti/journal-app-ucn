@@ -82,6 +82,12 @@ h1, h2 {
     color: #1F2A4E;
 }
 
+#loginform p a {
+    font-weight: 700;
+    color: #1F2A4E;
+    text-decoration: underline;
+}
+
 /*ADD SHADOW */
 #loginbutton {
     margin: 10% auto;
