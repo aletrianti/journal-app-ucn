@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
         var refResult = JSON.parse(xmlRequest.response);
         // Loop through the parsed response
         for (ref in refResult) {
+            // Display each "ReflectionName" in a list item in the "content" div in view.html
             document.getElementById('content').innerHTML += '<li class="refName">' + refResult[ref].ReflectionName + '</li>';
         }
     });

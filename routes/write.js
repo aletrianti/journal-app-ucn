@@ -18,7 +18,7 @@ router.post('/', async (req, res) => {
     const writeSchema = {
         // reflection
         ReflectionName: Joi.string().min(5).max(50).required(),
-        ReflectionBody: Joi.string().min(5).required(),
+        ReflectionBody: Joi.string().min(5).required()
         // note
         // NoteName: Joi.string().min(5).max(50).required(),
         // NoteBody: Joi.string().min(5).required()
@@ -40,11 +40,11 @@ router.post('/', async (req, res) => {
         const result = await pool.request()
                         .input('ReflectionName', sql.NVarChar, req.body.ReflectionName)
                         .input('ReflectionBody', sql.NVarChar, req.body.ReflectionBody)
-                        .query('INSERT INTO Reflection (ReflectionName, ReflectionBody) VALUES (@ReflectionName, @ReflectionBody)')
+                        .query('INSERT INTO Reflection (ReflectionName, ReflectionBody) VALUES (@ReflectionName, @ReflectionBody)');
 
         res.send(JSON.stringify(result.recordset[0]));
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.status(400).send(`${err}`);
     }
     sql.close();
 });

@@ -7,7 +7,7 @@ const con = require('../config/connection');
 const sql = require('mssql');
 
 // GET
-// display the name of the reflection/note in a list in view.html 
+// Request name of the reflections from the database 
 router.get('/', async (req, res) => {
     try {
         const pool = await sql.connect(con);
@@ -15,26 +15,22 @@ router.get('/', async (req, res) => {
 
         res.send(JSON.stringify(result.recordset));
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.status(400).send(`${err}`);
     }
     sql.close();
 });
 
 // GET
 router.get('/:id', async (req, res) => {
-    // display note/reflection selected in view.html
     try {
-        const pool = await sql.connect(con);
-        const result = await pool.request().query('SELECT ReflectionName, ReflectionBody FROM Reflection;');
+        // "TypeError: Cannot read property 'find' of undefined" --- ???
+        const result = con.Reflection.find(x => x.ReflectionID === parseInt(req.params.id));
 
-        res.send(JSON.stringify(result.recordset));
+        res.send(JSON.stringify(result));
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.status(400).send(`${err}`);
     }
     sql.close();
-
-    // view selected note/reflection in the form in write.html
-    // code goes here
 });
 
 // Export module

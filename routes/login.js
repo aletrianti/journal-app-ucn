@@ -17,7 +17,7 @@ router.get('/', auth, async (req, res) => {
 
         res.send(JSON.stringify(result.recordset));
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.status(400).send(`${err}`);
     }
     sql.close();
 });
@@ -59,11 +59,12 @@ router.post('/', auth, async (req, res) => {
         if (invalidPassStudent || invalidPassLecturer) throw 'Invalid username or password';
 
         // json web token (jwt)
-        const token = jwt.sign({"StudentID": user.StudentID, "LecturerID": user.LecturerID}, config.get('jwtPrivateKey'));
+        const payload = {"StudentID": user.StudentID, "LecturerID": user.LecturerID};
+        const token = jwt.sign(payload, config.get('jwtPrivateKey'));
         res.send(token);
 
     } catch (err) {
-        res.status(400).send(`$(err)`);
+        res.status(400).send(`${err}`);
     }
     sql.close();
 });
